@@ -1,0 +1,64 @@
+{
+  "iconfile": "img/icons.jpg",
+  "images":[
+    {
+      "name":"seven",
+      "id": "seven",
+      "x":0,
+      "y":0
+    },
+    {
+      "name":"lemon",
+      "id": "lemon",
+      "x":0,
+      "y":550
+    },
+    {
+      "name":"cherry",
+      "id": "cherry",
+      "x":0,
+      "y":1100
+    },
+
+
+    {
+      "name":"watermelon",
+      "id": "watermelon",
+      "x":550,
+      "y":0
+    },
+    {
+      "name":"banana",
+      "id": "banana",
+      "x":550,
+      "y":550
+    },
+    {
+      "name":"bar",
+      "id": "bar",
+      "x":550,
+      "y":1100
+    },
+
+
+    {
+      "name":"plum",
+      "id": "plum",
+      "x":1100,
+      "y":0
+    },
+    {
+      "name":"bigwin",
+      "id": "bigwin",
+      "x":1100,
+      "y":550
+    },
+    {
+      "name":"orange",
+      "id": "orange",
+      "x":1100,
+      "y":1100
+    }
+
+  ]
+}
