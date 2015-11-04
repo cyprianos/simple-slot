@@ -5,6 +5,12 @@ var App = {
     this.ajax('GET', 'config.json', true, this.setup, null, this);
     this.tpl = {};
   },
+
+  shuffle: function(){
+      var images = this.config.images,
+        winner = images[Math.floor(Math.random()*images.length)];
+      App.win = winner.name;
+  },
   setup: function(xhr) {
 
     var wrapper = document.getElementById('wrapper'),
@@ -13,10 +19,13 @@ var App = {
       slotImage,
       ctx = this.ctx,
       images,
-      self = this;
+      self = this,
+      winner;
+
 
     this.config = JSON.parse(xhr.responseText);
     images = this.config.images;
+    this.shuffle();
     images.forEach(function(item){
       option = document.createElement('option');
       option.value = item.name;
@@ -58,12 +67,15 @@ var App = {
     var button = document.getElementById('button');
     button.onclick = function(e){
       var result;
-      if(App.state === "bigwin") {
+      console.log(App.win, App.state);
+
+      if(App.state === App.win) {
         result = "won :)";
       } else {
-        result = "lose :(";
+        result = "lose :( the winner was: " + App.win ;
       }
       alert("You " + result);
+      App.shuffle();
 
     }
 
